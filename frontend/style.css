@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f9f7f7, #dbe2ef);
+  color: #112d4e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1.2s ease-in;
+}
+
+.typing {
+  font-size: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #3f72af;
+  width: 0;
+  animation: typing 3s steps(30) forwards, blink 0.75s infinite;
+}
+
+.rewards {
+  margin-top: 2rem;
+}
+
+.reward-card {
+  margin: 10px auto;
+  padding: 1rem;
+  border: 2px dashed #3f72af;
+  width: 200px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  background: #fce38a;
+}
+
+.reward-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #f38181;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.leaderboard-table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.leaderboard-table tr:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
+.leaderboard-table tr:hover {
+  background-color: #e0f7fa;
+  transform: scale(1.01);
+  transition: 0.3s;
+}
+
+body {
+  cursor: url('https://cdn-icons-png.flaticon.com/512/616/616408.png'), auto;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leaderboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="typing">🏆 Top Fundraisers</h1>
+    <table class="leaderboard-table" id="leaderboard">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Name</th>
+          <th>Donations (₹)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows will be injected by JS -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    fetch('http://localhost:5000/api/leaderboard')
+      .then(res => res.json())
+      .then(data => {
+        const table = document.querySelector('#leaderboard tbody');
+        data.sort((a, b) => b.donation - a.donation);
+        data.forEach((intern, index) => {
+          const row = `
+            <tr>
+              <td>${index + 1}</td>
+              <td>${intern.name}</td>
+              <td>${intern.donation.toLocaleString()}</td>
+            </tr>
+          `;
+          table.innerHTML += row;
+        });
+      });
+  </script>
+</body>
+</html>
