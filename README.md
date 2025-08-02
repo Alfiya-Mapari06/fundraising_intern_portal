@@ -6,8 +6,8 @@
 - Hosting: Netlify (Frontend), Render (Backend)
 
 ## 🔗 Live Links
-- Frontend: https://your-intern-portal.netlify.app
-- Backend: https://your-api.onrender.com
+- Frontend:https://famous-chaja-8645e9.netlify.app
+- Backend:https://backend-server-j4i7.onrender.com/api/intern
 
 ## 👩‍💻 Features
 - Displays intern name, referral code, donations
